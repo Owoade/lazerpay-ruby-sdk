@@ -1,5 +1,4 @@
 require_relative "./lazerpay/main_module.rb";
-require "dotenv/load"
 
 class LazerPay 
     attr_accessor :secret_key, :public_key, :payment, :fiat_deposit, :crypto_deposit, :payout, :crypto_swap, :transaction
@@ -14,9 +13,9 @@ class LazerPay
 
         raise "Secret key cannot be undefined" if @secret_key.nil?
 
-        raise "Invalid format for Public key, it must with 'pk'" unless @public_key.start_with?("pk_")
+        raise "Invalid format for Public key, it must start with 'pk'" unless @public_key.start_with?("pk_")
 
-        raise "Invalid format for Secret key, it must with 'sk'" unless @secret_key.start_with?("sk_")
+        raise "Invalid format for Secret key, it must start with 'sk'" unless @secret_key.start_with?("sk_")
 
         # Loads public and private key in to sub-classes
         LazerPayModule::Wrapper.new( @public_key, @secret_key )
@@ -25,9 +24,9 @@ class LazerPay
 
         @payout = LazerPayModule::Payout.new;
 
-        @fiat_deposit = LazerPayModule::Deposit::FIAT.new;
+        @fiat_top_up = LazerPayModule::Top_up::FIAT.new;
 
-        @crypto_deposit = LazerPayModule::Deposit::CRYPTO.new;
+        @crypto_top_up = LazerPayModule::Top_up::CRYPTO.new;
 
         @crypto_swap = LazerPayModule::Swap.new;
 
@@ -36,5 +35,5 @@ class LazerPay
     end
 end 
 
-lp = LazerPay.new(ENV["LP_PK"], ENV["LP_SK"]);
+
 

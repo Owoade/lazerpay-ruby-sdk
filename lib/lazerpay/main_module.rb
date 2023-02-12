@@ -61,7 +61,7 @@ module LazerPayModule
 
     end
 
-    module Deposit 
+    module Top_up 
 
         class FIAT < Wrapper
 
