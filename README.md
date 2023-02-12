@@ -66,6 +66,8 @@ To know more about the body attributes visit [the docs](https://docs.lazerpay.fi
 
 To know about content of the payload object click [here](https://docs.lazerpay.finance/home/payments/payment-links/standard-payment-link#create-a-new-standard-payment-link)
 
+###### Generate a Standard donation link
+
 ```ruby
     donation_link_object = lazerpay.payment.get_dontion_link( payload )
 
@@ -92,6 +94,81 @@ To know about content of the payload object click [here](https://docs.lazerpay.f
 
 ```
 To know about content of the payload object click [here](https://docs.lazerpay.finance/home/payouts/crypto-payouts#crypto-transfer-api)
+
+
+###  Deposit 💸
+###### Crypto deposit
+
+To initiate a crypto deposit, the asset to be deposited must be passed an argument. Accepted assets `USDT | BUSD | USDC | DAI` 
+
+```ruby
+    crypto_deposit_object = lazerpay.crypto_deposit.get_wallet_address( token )
+```
+
+###### FIAT deposit
+
+Initiate FIAT deposit
+
+```ruby
+    crypto_deposit_object = lazerpay.fiat_deposit.init( payload )
+```
+To know about content of the payload object click [here](https://docs.lazerpay.finance/home/top-up/fiat-deposit#initiate-on-ramp)
+
+
+Get funding rate
+
+```ruby
+    crypto_deposit_object = lazerpay.fiat_deposit.getting_funding_rate( currency )
+```
+Currency can be either `USD | NGN`
+
+Get accounts available for funding
+
+```ruby
+    crypto_deposit_object = lazerpay.fiat_deposit.getting_available_accounts
+```
+
+###  Swap 🔒
+###### Initialize
+
+```ruby
+    swap_object = lazerpay.crypto_swap.init( payload )
+```
+To know about content of the payload object click [here](https://docs.lazerpay.finance/home/swaps/stablecoins-swap#crypto-swap-api)
+
+
+###### Get Crypto Swap Amount Out
+
+```ruby
+    swap_object = lazerpay.crypto_swap.get_swap_amount( payload )
+```
+To know about content of the payload object click [here](https://docs.lazerpay.finance/home/swaps/stablecoins-swap#crypto-swap-api)
+
+
+###  Transaction 💳
+###### Retrieve a particular transaction by passing the transaction refernce.
+
+```ruby
+    transaction = lazerpay.transaction.get( reference )
+```
+
+###### Retrieve all transactions
+
+```ruby
+    transactions = lazerpay.transaction.get_all
+```
+
+
+### Contributing
+
+Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+
+Created with 🧡 by [Owoade](https://my-portfolio-owoade.vercel.app/)
+
+
+
+
 
 
 

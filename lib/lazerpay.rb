@@ -24,9 +24,9 @@ class LazerPay
 
         @payout = LazerPayModule::Payout.new;
 
-        @fiat_top_up = LazerPayModule::Top_up::FIAT.new;
+        @fiat_deposit = LazerPayModule::Top_up::FIAT.new;
 
-        @crypto_top_up = LazerPayModule::Top_up::CRYPTO.new;
+        @crypto_deposit = LazerPayModule::Top_up::CRYPTO.new;
 
         @crypto_swap = LazerPayModule::Swap.new;
 
