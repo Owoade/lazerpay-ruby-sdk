@@ -1,6 +1,6 @@
 # Lazerpay Ruby SDK
 
-Paystack gem for Ruby api only application
+Ruby SDK for lazerpay finance.
 
 ### Installation
 
@@ -99,7 +99,7 @@ To know about content of the payload object click [here](https://docs.lazerpay.f
 ###  Deposit 💸
 ###### Crypto deposit
 
-To initiate a crypto deposit, the asset to be deposited must be passed an argument. Accepted assets `USDT | BUSD | USDC | DAI` 
+To initiate a crypto deposit, the asset to be deposited must be passed an argument. Accepted assets: `USDT | BUSD | USDC | DAI` 
 
 ```ruby
     crypto_deposit_object = lazerpay.crypto_deposit.get_wallet_address( token )
