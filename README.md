@@ -21,10 +21,10 @@ Or install it yourself as:
 ## Basic Usage
 
 
-### Instantiate Paystack Object
+### Instantiate Lazerpay Object
 
 ```ruby
-    require 'paystackapi'
+    require 'lazerpay'
 
     lazerpay = LazerPay.new( public_key, secret_key );
 
