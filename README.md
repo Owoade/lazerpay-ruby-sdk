@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install paystack
+    $ gem install lazerpay
 
 ## Basic Usage
 
