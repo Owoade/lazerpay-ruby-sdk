@@ -110,7 +110,7 @@ To initiate a crypto deposit, the asset to be deposited must be passed an argume
 Initiate FIAT deposit
 
 ```ruby
-    crypto_deposit_object = lazerpay.fiat_deposit.init( payload )
+    fiat_deposit_object = lazerpay.fiat_deposit.init( payload )
 ```
 To know about content of the payload object click [here](https://docs.lazerpay.finance/home/top-up/fiat-deposit#initiate-on-ramp)
 
@@ -118,14 +118,14 @@ To know about content of the payload object click [here](https://docs.lazerpay.f
 Get funding rate
 
 ```ruby
-    crypto_deposit_object = lazerpay.fiat_deposit.getting_funding_rate( currency )
+    funding_rate = lazerpay.fiat_deposit.getting_funding_rate( currency )
 ```
 Currency can be either `USD | NGN`
 
 Get accounts available for funding
 
 ```ruby
-    crypto_deposit_object = lazerpay.fiat_deposit.getting_available_accounts
+    funding_accounts = lazerpay.fiat_deposit.getting_available_accounts
 ```
 
 ###  Swap 🔒
